@@ -1,4 +1,3 @@
-import com.sanver.projects.codility_problems.BinaryGap;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,3 @@
-package com.sanver.projects.codility_problems;
-
 public class BinaryGap {
     public int solution(int number) {
         char[] binaryArray = Integer.toBinaryString(number).toCharArray();
