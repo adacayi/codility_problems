@@ -12,10 +12,10 @@ public class CyclicRotation {
     }
 
     public int[] solution(int[] array, int rotation) {
-        if(array==null || array.length==0)
+        if (array == null || array.length == 0)
             return array;
 
-        int i, length = array.length, current;
+        int i, length = array.length;
         rotation = rotation % length;
 
         if (rotation == 0)
@@ -24,7 +24,7 @@ public class CyclicRotation {
         int[] result = new int[length];
 
         for (i = 0; i < length; i++)
-            result[i] = array[i - rotation < 0 ? i - rotation + length : i - rotation];
+            result[(i + rotation) % length] = array[i];
 
         return result;
     }
