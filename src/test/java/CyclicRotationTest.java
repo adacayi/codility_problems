@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -6,12 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CyclicRotationTest {
-    private CyclicRotation cyclicRotation;
-
-    @BeforeAll
-    public void initAll() {
-        cyclicRotation = new CyclicRotation();
-    }
+    private CyclicRotation cyclicRotation = new CyclicRotation();
 
     @Test
     public void should_Return231_When_123With2Rotation() {

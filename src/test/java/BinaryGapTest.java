@@ -1,16 +1,12 @@
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BinaryGapTest {
-    private BinaryGap binaryGap;
-
-    @BeforeEach
-    public void init() {
-        binaryGap = new BinaryGap();
-    }
+    private BinaryGap binaryGap = new BinaryGap();
 
     @AfterEach
     public void tearDown() {
@@ -37,6 +33,7 @@ public class BinaryGapTest {
         int actual = binaryGap.solution(1041);
         assertEquals(expected, actual);
     }
+
     @Test
     public void should_Return28_When_1610612737() {
         int expected = 28;
