@@ -1,28 +1,17 @@
 public class BinaryGap {
     public int solution(int number) {
-        char[] binaryArray = Integer.toBinaryString(number).toCharArray();
-        int i, current = 0, max = 0, begin = -1;
+        char[] array = Integer.toString(number, 2).toCharArray();
+        int i, begin = -1, max = 0;
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == '0')
+                continue;
 
-        for (i = 0; i < binaryArray.length; i++) {
-            switch (binaryArray[i]) {
-                case '0':
-                    if (begin != -1)
-                        current++;
-                    break;
-                case '1':
-                    if (begin == -1) {
-                        begin = i;
-                        break;
-                    }
-                    begin = i;
-                    if (current > max)
-                        max = current;
-                    current = 0;
-                    break;
-                default:
-                    break;
-            }
+            if (begin >= 0)
+                max = Math.max(max, i - begin - 1);
+
+            begin = i;
         }
+
         return max;
     }
 }
