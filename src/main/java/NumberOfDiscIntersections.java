@@ -9,9 +9,10 @@ public class NumberOfDiscIntersections {
         long[] begin = new long[n], end = new long[n];
 
         for (i = 0; i < n; i++) {
-            begin[i] = i - array[i];
-            end[i] = i + array[i];
+            begin[i] = i - (long) array[i];
+            end[i] = i + (long) array[i];
         }
+
         Arrays.sort(begin);
         Arrays.sort(end);
         j = 0;
