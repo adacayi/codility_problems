@@ -10,7 +10,7 @@ public class Peaks {
 
         for (i = 1; i < n - 1; i++)
             if (array[i] > array[i - 1] && array[i] > array[i + 1])
-                peaks.add(i);
+                peaks.add(i++);
 
         if (peaks.isEmpty())
             return 0;
