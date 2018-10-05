@@ -4,9 +4,8 @@ public class CommonPrimeDivisors {
         int c;
 
         while (b > 0) {
-            a = a % b;
             c = b;
-            b = a;
+            b = a % b;
             a = c;
         }
 

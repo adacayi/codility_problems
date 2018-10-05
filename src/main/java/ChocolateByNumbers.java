@@ -1,13 +1,10 @@
 public class ChocolateByNumbers {
-    public int gcd(int a, int b) {
+    private int gcd(int a, int b) {
         int c;
 
-        while (b != 0) {
-            a = a % b; // The greatest common divisor of a and b must also be the greatest common divisor of a%b and b.
-            // We know that a%b is smaller than b. So the new a is smaller than b.
-            // Hence we swap a and b, so that b is always smaller.
+        while (b > 0) {
             c = b;
-            b = a;
+            b = a % b;
             a = c;
         }
 
