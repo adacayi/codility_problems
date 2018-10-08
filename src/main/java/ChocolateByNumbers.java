@@ -1,5 +1,5 @@
 public class ChocolateByNumbers {
-    private int gcd(int a, int b) {
+    public int gcd(int a, int b) {
         int c;
 
         while (b > 0) {
