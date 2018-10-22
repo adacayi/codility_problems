@@ -58,7 +58,6 @@ public class SlalomSkiingTest {
         assertEquals(expected, slalomSkiing.solution(new int[]{1, 2, 3, 4, 5}));
         assertEquals(expected, slalomSkiing.solution(new int[]{3, 1, 2, 4, 5}));
         assertEquals(expected, slalomSkiing.solution(new int[]{3, 4, 2, 1, 5}));
-        assertEquals(expected, slalomSkiing.solution(new int[]{3, 4, 4, 2, 1, 5}));
     }
 
     @Test
